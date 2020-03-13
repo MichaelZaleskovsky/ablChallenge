@@ -71,8 +71,8 @@ public class MyListTestCase {
 	
 	@Test
 	public void testTransformer() {
-		MyPredicate<Integer> even = (a) -> a*a;
-		MyListJ<Integer> myList5 = myList4.filter(even);
+		MyPredicate<Integer> square = (a) -> a*a;
+		MyListJ<Integer> myList5 = myList4.filter(square);
 		Integer[] expected = {1, 4, 9, 16};
 		assertArrayEquals(expected, ((MyList<Integer>)myList5).toArray());
 	}
